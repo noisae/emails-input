@@ -8,7 +8,7 @@ module.exports = {
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'emails-input.js',
+    filename: 'emails-input.min.js',
     library: 'EmailsInput',
     libraryTarget: 'umd',
   },

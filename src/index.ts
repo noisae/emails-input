@@ -48,7 +48,7 @@ function EmailsInput(domNode: HTMLElement, options: EmailsInputOptions): EmailsI
   function setEmails(newEmails: string[]): void {
     emails = [];
     emailBoxes = [];
-    emailsContainerElement = EmailsContainer(options.placeholder || '', emailInputElement);
+    emailsContainerElement = EmailsContainer(options.customClassName || '', emailInputElement);
     domNode.innerHTML = "";
     domNode.appendChild(emailsContainerElement);
     newEmails.forEach(addEmail);
