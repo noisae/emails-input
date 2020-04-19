@@ -35,14 +35,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
   },
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    port: 9000,
-    open: true,
-    compress: true,
-  },
   plugins: [
-    new webpack.SourceMapDevToolPlugin({}),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
