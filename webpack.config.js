@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const autoprefixer = require("autoprefixer");
 
 module.exports = {
   entry: './src/index.ts',
@@ -20,7 +21,14 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader', {
+          loader: 'postcss-loader',
+          options: {
+            plugins: [
+              autoprefixer,
+            ],
+          },
+        }],
       },
     ],
   },
