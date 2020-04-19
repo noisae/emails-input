@@ -54,6 +54,10 @@ function EmailsInput(domNode: HTMLElement, options: EmailsInputOptions): EmailsI
     newEmails.forEach(addEmail);
   }
 
+  emailInputElement.addEventListener('blur', function onEmailInputElementBlur(event: KeyboardEvent) {
+    onAddEmail(emailInputElement.value);
+  });
+
   emailInputElement.addEventListener('keydown', function onEmailInputElementKeyUp(event: KeyboardEvent) {
     const actionsMap = {
       'Enter': onAddEmail,
