@@ -46,7 +46,7 @@
         font-size: 14px;
         line-height: 24px;
         cursor: pointer;
-      }</style><script src="./emails-input.min.js"></script></head><body><div class="email-form"><div class="email-form__content"><h3 class="email-form__title">Share <strong>Board name</strong> with others</h3><div class="email-form__input" id="emails-input-container"></div></div><div class="email-form__buttons"><input type="button" class="email-form__buttons__button" value="Add email" onclick="addEmail()"> <input type="button" class="email-form__buttons__button" value="Get emails count" onclick="getEmailsCount()"></div></div><script>var emailsInputContainer = document.getElementById("emails-input-container");
+      }</style></head><body><script src="emails-input.min.js"></script><div class="email-form"><div class="email-form__content"><h3 class="email-form__title">Share <strong>Board name</strong> with others</h3><div class="email-form__input" id="emails-input-container"></div></div><div class="email-form__buttons"><input type="button" class="email-form__buttons__button" value="Add email" onclick="addEmail()"> <input type="button" class="email-form__buttons__button" value="Get emails count" onclick="getEmailsCount()"></div></div><script>var emailsInputContainer = document.getElementById("emails-input-container");
       var emailsInput = EmailsInput(emailsInputContainer, {
         customClassName: 'custom-class',
         emails: ['test@gmail.com', 'test@outlook.com'],
@@ -83,4 +83,4 @@
 
       function getEmailsCount() {
         alert("Email count: " +  emailsInput.getEmails().length);
-      }</script></body></html>
+      }</script><script src="emails-input.min.js"></script></body></html>

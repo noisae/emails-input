@@ -54,7 +54,7 @@ function EmailsInput(domNode: HTMLElement, options: EmailsInputOptions): EmailsI
     newEmails.forEach(addEmail);
   }
 
-  emailInputElement.addEventListener('blur', function onEmailInputElementBlur(event: KeyboardEvent) {
+  emailInputElement.addEventListener('blur', function onEmailInputElementBlur() {
     onAddEmail(emailInputElement.value);
   });
 

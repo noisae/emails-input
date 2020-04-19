@@ -4,6 +4,7 @@
   "description": "A solution for input emails",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint ./src/**/*.ts",
     "test": "testcafe chrome ./e2e/**/*.ts",
     "test:live": "testcafe --live chrome ./e2e/**/*.ts",
     "develop": "webpack-dev-server --config webpack.dev.js",
