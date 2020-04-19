@@ -1,3 +1,5 @@
 export interface EmailsInputOptions {
-  className: string;
+  customClassName?: string;
+  emails?: string[];
+  placeholder?: string;
 }

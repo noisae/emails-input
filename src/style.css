@@ -1,0 +1,47 @@
+.emails-input {
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  overflow: hidden;
+  color: #050038;
+}
+
+.emails-input__email-box {
+  display: inline-flex;
+  padding-left: 10px;
+  border-radius: 100px;
+  background: rgba(102, 153, 255, 0.2);
+  margin-right: 8px;
+  margin-bottom: 4px;
+}
+
+.emails-input__email-box--invalid {
+  background: none;
+  border-bottom: 1px dashed #D92929;
+  border-radius: 0px;
+}
+
+.emails-input__email-input,
+.emails-input__email-input:focus {
+  padding: 0;
+  font-size: 14px;
+  border: 0;
+  margin: 0;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  min-width: 5%;
+  flex-grow: 1;
+}
+.emails-input__email-input::placeholder {
+  color: #C3C2CF;
+}
+
+.emails-input__erase-button {
+  content: url("data:image/svg+xml; utf8, %3Csvg%20width%3D%228%22%20height%3D%228%22%20viewBox%3D%220%200%208%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M8%200.8L7.2%200L4%203.2L0.8%200L0%200.8L3.2%204L0%207.2L0.8%208L4%204.8L7.2%208L8%207.2L4.8%204L8%200.8Z%22%20fill%3D%22%23050038%22%2F%3E%3C%2Fsvg%3E");
+  padding-left: 8px;
+  padding-right: 8px;
+  cursor: pointer;
+}
