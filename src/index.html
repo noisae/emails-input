@@ -70,8 +70,9 @@
       var emailsInputContainer = document.getElementById("emails-input-container");
       var emailsInput = EmailsInput(emailsInputContainer, {
         customClassName: 'custom-class',
-        emails: ['test@gmail.com', 'test@outlook.com']
+        emails: ['test@gmail.com', 'test@outlook.com'],
       });
+      emailsInput.onEmailsChange(function(emails) { console.log(emails);});
 
       function makeEmail() {
         var strValues = "abcdefghijklmnopqrstuvxywz";

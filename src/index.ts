@@ -5,8 +5,8 @@ import EmailsContainer from './components/EmailsContainer';
 import './style.css';
 
 function EmailsInput(domNode: HTMLElement, options: EmailsInputOptions): EmailsInputReturn {
-  const eventTargetFragment = document.createDocumentFragment();
   const emailInputElement = EmailInput(options.placeholder ||  'Type your emails...');
+  let onChange = options.onChange;
   let emails = [];
   let emailBoxes = [];
   let emailsContainerElement: HTMLDivElement;
@@ -16,6 +16,7 @@ function EmailsInput(domNode: HTMLElement, options: EmailsInputOptions): EmailsI
     emails.splice(emailIndex, 1);
     emailBoxes.splice(emailIndex, 1);
     emailsContainerElement.removeChild(emailBox);
+    onChange && onChange(emails);
   }
 
   function addEmail(email: string): void {
@@ -29,6 +30,7 @@ function EmailsInput(domNode: HTMLElement, options: EmailsInputOptions): EmailsI
     emails.push(insertEmail);
     emailsContainerElement.insertBefore(emailBox, emailInputElement);
     domNode.scrollTop = emailsContainerElement.scrollHeight;
+    onChange && onChange(emails);
   }
 
   function onAddEmail(email: string): void {
@@ -74,8 +76,8 @@ function EmailsInput(domNode: HTMLElement, options: EmailsInputOptions): EmailsI
   return {
     getEmails: function getEmails(): string[] { return emails; },
     setEmails: setEmails,
-    onEmailsChange: function onEmailsChange(callback: (event: Event) => void): void {
-      eventTargetFragment.addEventListener('onChange', callback);
+    onEmailsChange: function onEmailsChange(callback: (emails: string[]) => void): void {
+      onChange = callback;
     },
   };
 }
