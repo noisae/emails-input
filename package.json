@@ -2,13 +2,15 @@
   "name": "emails-input",
   "version": "1.0.0",
   "description": "A solution for input emails",
-  "main": "index.js",
   "scripts": {
     "lint": "eslint ./src/**/*.ts",
     "test": "testcafe chrome ./e2e/**/*.ts",
     "test:live": "testcafe --live chrome ./e2e/**/*.ts",
     "develop": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --mode production --config webpack.prod.js"
+  },
+  "engines": {
+    "node": ">=12"
   },
   "author": "",
   "license": "ISC",

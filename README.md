@@ -70,6 +70,9 @@ Install dependencies:
 Run development server:
 `> npm run develop`
 
+Run lint:
+`> npm run lint`
+
 ## E2E Testing
 
 Install dependencies:

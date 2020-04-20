@@ -10,7 +10,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'emails-input.min.js',
     library: 'EmailsInput',
-    libraryTarget: 'umd',
   },
   module: {
     rules: [
@@ -33,7 +32,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.ts'],
   },
   plugins: [
     new CleanWebpackPlugin(),
